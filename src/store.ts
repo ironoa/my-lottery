@@ -9,7 +9,7 @@ export class Store {
         this.availableTickets = [...tickets];
     }
 
-    reset = () => {
+    reset = (): void => {
         this.purchasedTickets.clear();
     };
 

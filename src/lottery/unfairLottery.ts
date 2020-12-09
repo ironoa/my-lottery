@@ -1,6 +1,5 @@
 import { Store } from '../store';
 import { Partecipant, Ticket, UnfairnessConfig } from '../types';
-import { getRandomPositiveInt } from '../utils';
 import { FairLottery } from './fairLottery';
 import { ILottery } from './ILottery';
 

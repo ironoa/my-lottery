@@ -1,0 +1,34 @@
+version: 2
+
+jobs:
+  yarnLint:
+    docker:
+      - image: web3f/node-dind:v0.3.0
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn lint
+
+  yarnTest:
+    docker:
+      - image: web3f/node-dind:v0.3.0
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn test    
+ 
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - yarnLint:
+          filters:
+            tags:
+              only: /.*/     
+      - yarnTest:
+          filters:
+            tags:
+              only: /.*/   
+          requires:
+            - yarnLint                  
+

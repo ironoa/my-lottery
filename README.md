@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/ironoa/my-lottery.svg?style=svg)](https://circleci.com/gh/ironoa/my-lottery)
+
 # my-lottery
 
 A node-Typescript application.

@@ -1,7 +1,7 @@
 import { InputConfig, Partecipant, Ticket, SimulationResult, PartecipantScores, Win } from '../types';
 import { Config } from '../coreUtils/config';
 import { createLogger, Logger } from '../coreUtils/logger';
-import { generateTickets, getRandomPositiveInt } from '../utils';
+import { generateTickets } from '../utils';
 import { Store } from '../store';
 import { ILottery } from '../lottery/ILottery';
 import { makeLottery } from '../lottery/factoryLottery';
@@ -25,11 +25,11 @@ export class Simulation {
         const result = this._simulateWinnersExtraction(this.cfg.sampleNumber);
 
         this._printResults(result);
-        return result
+        return result;
     };
 
     private _loadConfig = (cmd: { config: string }): InputConfig => {
-        const cfg = this._parseConfig(cmd)
+        const cfg = this._parseConfig(cmd);
         if (!this._isConfigValid(cfg)) {
             console.error(`config is invalid, must be M>N`);
             process.exit(-1);
@@ -38,8 +38,8 @@ export class Simulation {
     };
 
     private _parseConfig = (cmd: { config: string }): InputConfig => {
-      return new Config<InputConfig>().parse(cmd.config);
-    }
+        return new Config<InputConfig>().parse(cmd.config);
+    };
 
     private _isConfigValid = (cfg: InputConfig): boolean => {
         return this._isTicketsEnough(cfg);
