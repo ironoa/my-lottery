@@ -1,0 +1,9 @@
+node_modules/
+dist/
+assets/
+.eslintignore
+.eslintrc.js
+.eslintrc.json
+.gitignore
+LICENSE
+README.md
