@@ -42,11 +42,11 @@ yarn test
 ## How to Docker
 
 ```bash
+cp config/main.sample.yaml config/main.yaml #if not present
 docker build . -t my-lottery
 
 #run
 docker run my-lottery
-cp config/main.sample.yaml config/main.yaml #if not present
 
 #test
 docker run --entrypoint /bin/sh my-lottery -c 'yarn test'
