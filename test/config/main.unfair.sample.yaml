@@ -1,0 +1,32 @@
+{
+  logLevel: "info",
+  ticketsM: 15,
+  partecipants: [
+    {
+      email: "1",
+      desideredTickets: 2
+    },
+    {
+      email: "2",
+      desideredTickets: 1
+    },
+    {
+      email: "3",
+      desideredTickets: 1
+    },
+    {
+      email: "4",
+      desideredTickets: 3
+    },
+    {
+      email: "5",
+      desideredTickets: 1
+    },
+  ],
+  sampleNumber: 50000,
+  unfairness: {
+    enabled: true,
+    partecipantIndex: 1,
+    unfairnessThreshold: 2
+  }
+}
